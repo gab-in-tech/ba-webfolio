@@ -1,15 +1,77 @@
-/* "What I do" page only. Shared styles live in base.css. */
+/* Self-hosted fonts (replaces the Google Fonts link) */
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 300 500;
+  font-display: swap;
+  src: url("fonts/dm-sans-latin-wght-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Mono";
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/dm-mono-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Mono";
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/dm-mono-latin-500-normal.woff2") format("woff2");
+}
 
-body {
+:root {
+  --bg: #1e1f20;
+  --surface: #272829;
+  --border: #333435;
+  --border-mid: #444546;
+  --text-1: #e2e2e0;
+  --text-2: #a0a09e;
+  --text-3: #9c9c9a;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  min-height: 100%;
+  background-color: var(--bg);
+  color: var(--text-1);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 17px;
   line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
   padding: 48px 24px 64px;
 }
 
 .card {
+  width: 100%;
   max-width: 620px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
   padding: 48px 48px 40px;
   height: fit-content;
 }
@@ -28,7 +90,9 @@ body {
   font-family: "DM Mono", monospace;
   font-size: 13px;
   text-decoration: none;
-  transition: border-color 0.18s, color 0.18s;
+  transition:
+    border-color 0.18s,
+    color 0.18s;
 }
 
 .home-btn:hover {
@@ -48,10 +112,45 @@ body {
   margin-bottom: 32px;
 }
 
+.avatar-wrap {
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--border-mid);
+  display: block;
+  margin: 0 auto;
+  background: var(--border);
+}
+
+.name {
+  font-family: "DM Mono", monospace;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-1);
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.role {
+  font-family: "DM Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-1);
+  margin-bottom: 14px;
+}
+
 .term {
   font-style: italic;
-  color: var(--text-1); /* brighter than the surrounding text-2, which is the emphasis */
-  font-weight: 300; /* 200 was never loaded, so the browser used 300 anyway */
+  color: var(--text-1);
+  font-weight: 200;
 }
 
 .homepage-nudge {
@@ -62,6 +161,8 @@ body {
 }
 
 .divider {
+  border: none;
+  border-top: 1px solid var(--border);
   margin: 32px 0;
 }
 
@@ -138,7 +239,10 @@ body {
   font-size: 15px;
   font-weight: 400;
   text-decoration: none;
-  transition: border-color 0.18s, background 0.18s, color 0.18s;
+  transition:
+    border-color 0.18s,
+    background 0.18s,
+    color 0.18s;
 }
 
 .next-cta:hover {
@@ -176,7 +280,9 @@ body {
   color: var(--text-2);
   cursor: pointer;
   z-index: 100;
-  transition: border-color 0.18s, color 0.18s;
+  transition:
+    border-color 0.18s,
+    color 0.18s;
 }
 
 .scroll-btn:hover {
@@ -188,11 +294,6 @@ body {
   width: 18px;
   height: 18px;
   fill: currentColor;
-  transition: transform 0.18s;
-}
-
-.scroll-btn[data-direction="up"] svg {
-  transform: rotate(180deg);
 }
 
 .scroll-btn:focus-visible {
@@ -208,12 +309,23 @@ footer {
   border-top: 1px solid var(--border);
 }
 
+.footer {
+  font-family: "DM Mono", monospace;
+  letter-spacing: 0.02em;
+  font-size: 13px;
+  color: var(--text-3);
+}
+
 @media (max-width: 540px) {
   .page {
     padding: 24px 16px 48px;
   }
   .card {
     padding: 28px 20px 32px;
+    border-radius: 16px;
+  }
+  .name {
+    font-size: 20px;
   }
   .lead-text {
     font-size: 17px;

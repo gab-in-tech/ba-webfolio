@@ -1,4 +1,22 @@
 /* Shared by every page. Page stylesheets only add what differs. */
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 300 500;
+  font-display: swap;
+  src: url("fonts/dm-sans-latin-wght-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Mono";
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/dm-mono-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Mono";
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/dm-mono-latin-500-normal.woff2") format("woff2");
+}
 
 :root {
   color-scheme: dark;

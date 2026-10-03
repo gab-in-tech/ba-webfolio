@@ -1,92 +1,180 @@
-/* Home page only. Shared styles live in base.css. */
+/* Self-hosted fonts (replaces the Google Fonts link) */
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 300 500;
+  font-display: swap;
+  src: url("fonts/dm-sans-latin-wght-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Mono";
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/dm-mono-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Mono";
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/dm-mono-latin-500-normal.woff2") format("woff2");
+}
 
+.name,
+.role {
+  font-family: "DM Mono", monospace;
+}
+.name,
+body,
+html {
+  color: var(--text-1);
+}
 :root {
+  --bg: #1e1f20;
+  --surface: #272829;
+  --border: #333435;
+  --border-mid: #444546;
+  --text-1: #e2e2e0;
+  --text-2: #a0a09e;
+  --text-3: #9c9c9a;
   --link-idle: #b0b0ae;
   --link-hover: #e2e2e0;
 }
-
-.page {
-  align-items: center;
+.card,
+.nav-link {
+  border: 1px solid var(--border);
 }
-
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  min-height: 100%;
+  background-color: var(--bg);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
 .card {
+  width: 100%;
   max-width: 520px;
+  background: var(--surface);
+  border-radius: 20px;
   padding: 48px 44px 40px;
   text-align: center;
 }
-
+.avatar-wrap {
+  margin-bottom: 20px;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--border-mid);
+  display: block;
+  margin: 0 auto;
+  background: var(--border);
+}
+.nav,
+.nav-link,
+.social-link,
+.socials {
+  display: flex;
+}
+.name {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+.bio {
+  font-weight: 300;
+  color: var(--text-2);
+}
 .role {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   margin-bottom: 24px;
 }
-
+.footer,
+.nav-link {
+  font-family: "DM Mono", monospace;
+  letter-spacing: 0.02em;
+}
 .bio {
   font-size: 16px;
-  font-style: italic;
-  font-weight: 300;
   line-height: 1.75;
-  color: var(--text-2);
   margin-bottom: 28px;
+  font-style: italic;
 }
-
-.divider {
+.divider,
+.nav {
   margin-bottom: 24px;
 }
-
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+}
 .nav {
-  display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 24px;
 }
-
 .nav-link {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
-  border: 1px solid var(--border);
   border-radius: 10px;
+  text-decoration: none;
   color: var(--link-idle);
-  font-family: "DM Mono", monospace;
   font-size: 15px;
   font-weight: 400;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: border-color 0.18s, color 0.18s, background 0.18s;
+  transition:
+    border-color 0.18s,
+    color 0.18s,
+    background 0.18s;
 }
-
 .nav-link:hover {
   border-color: var(--border-mid);
   color: var(--link-hover);
   background: rgba(255, 255, 255, 0.03);
 }
-
 .nav-link:focus-visible {
   outline: 2px solid var(--text-2);
   outline-offset: 3px;
   border-color: var(--border-mid);
   color: var(--link-hover);
 }
-
 .arrow {
   color: var(--text-3);
-  transition: transform 0.18s, color 0.18s;
+  transition:
+    transform 0.18s,
+    color 0.18s;
 }
-
 .nav-link:hover .arrow {
   transform: translateX(3px);
   color: var(--text-2);
 }
-
 .socials {
-  display: flex;
   justify-content: center;
   gap: 12px;
   margin-bottom: 28px;
 }
-
 .social-link {
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 48px;
@@ -95,33 +183,39 @@
   border-radius: 10px;
   color: var(--text-2);
   text-decoration: none;
-  transition: border-color 0.18s, color 0.18s;
+  transition:
+    border-color 0.18s,
+    color 0.18s;
 }
-
 .social-link:hover {
   border-color: var(--border-mid);
   color: var(--text-1);
 }
-
 .social-link:focus-visible {
   outline: 2px solid var(--text-2);
   outline-offset: 3px;
   border-color: var(--border-mid);
   color: var(--text-1);
 }
-
 .social-link svg {
   width: 20px;
   height: 20px;
   fill: currentColor;
 }
-
+.footer {
+  font-size: 13px;
+  color: var(--text-3);
+}
 @media (max-width: 540px) {
   .page {
     padding: 24px 16px;
   }
   .card {
     padding: 36px 28px 32px;
+    border-radius: 16px;
+  }
+  .name {
+    font-size: 20px;
   }
   .role {
     font-size: 15px;

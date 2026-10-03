@@ -23,8 +23,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_node/apple-touch-icon.png" />
   <link rel="manifest" href="favicon_node/site.webmanifest" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/dm-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="style.css" />
@@ -48,7 +48,13 @@
   <main class="page">
     <div class="card">
       <div class="avatar-wrap">
-        <img class="avatar" src="images/general-headshot.webp" width="150" height="150" fetchpriority="high" alt="Gabriel Philip General" />
+        <img class="avatar"
+     src="images/general-headshot-300.webp"
+     srcset="images/general-headshot-150.webp 150w,
+             images/general-headshot-300.webp 300w,
+             images/general-headshot-450.webp 450w"
+     sizes="150px" width="150" height="150"
+     fetchpriority="high" alt="Gabriel Philip General" />
       </div>
 
       <h1 class="name">Gabriel Philip General</h1>
