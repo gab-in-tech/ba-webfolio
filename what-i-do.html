@@ -1,153 +1,100 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What I Do — Gab Webfolio</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What I Do | Gabriel Philip General, Business Analyst</title>
+  <meta name="description" content="How Gabriel Philip General works as a Business Analyst: find the real problem, simplify the workflow, document it for the people who use it." />
+  <link rel="canonical" href="https://gab-webfolio.pages.dev/what-i-do.html" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#1e1f20" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicon_node/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon_node/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon_node/favicon-16x16.png"
-    />
-    <link rel="manifest" href="favicon_node/site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gab-webfolio.pages.dev/what-i-do.html" />
+  <meta property="og:title" content="What I Do | Gabriel Philip General" />
+  <meta property="og:description" content="The systems I build are the ones people don't have to think about." />
+  <meta property="og:image" content="https://gab-webfolio.pages.dev/images/og-card.png" />
+  <meta property="og:image:alt" content="Gabriel Philip General, Business Analyst" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Same preconnect + display=swap pattern as the original: text renders
-       in a fallback font immediately, custom font swaps in when ready. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="what-i-do.css" />
-  </head>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_node/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_node/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_node/favicon-16x16.png" />
+  <link rel="manifest" href="favicon_node/site.webmanifest" />
 
-  <body>
-    <button class="scroll-btn" id="scrollBtn" aria-label="Scroll to bottom">
-      <svg
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
-      </svg>
-    </button>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="what-i-do.css" />
+</head>
+<body>
+  <button class="scroll-btn" id="scrollBtn" type="button" aria-label="Scroll to bottom" hidden>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+    </svg>
+  </button>
 
-    <main class="page">
-      <article class="card">
-        <a href="index.html" class="home-btn" aria-label="Back to home">
-          <svg
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-          </svg>
-          <span>Home</span>
+  <main class="page">
+    <article class="card">
+      <a href="index.html" class="home-btn" aria-label="Back to home">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </svg>
+        <span>Home</span>
+      </a>
+
+      <header class="profile-header">
+        <div class="avatar-wrap">
+          <img class="avatar" src="images/general-headshot.webp" width="150" height="150" fetchpriority="high" alt="Gabriel Philip General" />
+        </div>
+        <h1 class="name">Gabriel Philip General</h1>
+        <p class="role">Business Analyst</p>
+        <p class="homepage-nudge">(You read the bio. Now here's what it actually means.)</p>
+      </header>
+
+      <hr class="divider" />
+
+      <!-- The belief: one section carrying the whole page. Work is where the evidence lives. -->
+      <section class="section" aria-labelledby="section-belief">
+        <h2 class="visually-hidden" id="section-belief">What I do</h2>
+
+        <p class="body-text lead-text">I believe the best systems are the ones people don't have to think about.</p>
+
+        <p class="body-text">If someone has to stop and figure out how something works, I've probably missed something.</p>
+
+        <p class="body-text">That's why I don't start with tools. I start by understanding what's actually happening, what's getting in the way, and what people really need. Sometimes the best solution isn't adding something new. It's removing what was never needed in the first place.</p>
+
+        <p class="body-text">Here's what that looks like in practice:</p>
+
+        <ol class="practice-list">
+          <li class="practice-item">I ask what's actually causing the problem before I think about the solution. <span class="term">(Requirements discovery)</span></li>
+          <li class="practice-item">I simplify a workflow so it saves everyone time, not just me. If a step doesn't need to exist, I remove it. <span class="term">(Process mapping and improvement)</span></li>
+          <li class="practice-item">I care about how information is organized just as much as how the interface looks. A clean interface on a confusing database still fails the person using it. <span class="term">(Data structuring and gap analysis)</span></li>
+          <li class="practice-item">I design for the least technical person in the room. If they need help to use it, it isn't ready. <span class="term">(Stakeholder-first thinking)</span></li>
+          <li class="practice-item">I write documentation for the people using the system, not just the people who built it. <span class="term">(Requirements documentation)</span></li>
+        </ol>
+
+        <p class="body-text"><strong class="emphasis">The result?</strong> People spend less time figuring things out and more time getting things done.</p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Soft call to action: points forward to Work, not to contact. -->
+      <section class="section cta-section" aria-label="Continue to work">
+        <p class="body-text cta-lead">Want to see what that looks like?</p>
+        <a href="https://www.notion.so/gabgeneral/Inside-the-Process-34de05f6a1698034b65dfde21565fe50?source=copy_link" class="next-cta" target="_blank" rel="noopener noreferrer">
+          Here's the work
+          <span class="arrow" aria-hidden="true">&rarr;</span>
         </a>
+      </section>
 
-        <header class="profile-header">
-          <div class="avatar-wrap">
-            <img
-              class="avatar"
-              src="images/general-headshot.webp"
-              fetchpriority="high"
-              alt="Gabriel Philip General"
-            />
-          </div>
+      <footer>
+        <p class="footer">&copy; 2026 Gabriel Philip General. All rights reserved.</p>
+      </footer>
+    </article>
+  </main>
 
-          <h1 class="name">Gabriel Philip General</h1>
-          <p class="role">Business Analyst</p>
-
-          <p class="homepage-nudge">
-            (You read the bio. Now here's what it actually means.)
-          </p>
-        </header>
-
-        <hr class="divider" />
-
-        <!-- ── THE BELIEF ── -->
-        <!-- One section, three sentences carrying the whole page: the belief,
-           what it means in practice, what changes because of it. Nothing
-           else competes for attention here — Work is where evidence lives. -->
-        <section class="section" aria-labelledby="section-belief">
-          <h2 class="visually-hidden" id="section-belief">What I do</h2>
-
-          <p class="body-text lead-text">
-            I believe the best systems are the ones people don't have to
-            think about.
-          </p>
-          <p class="body-text">
-            If someone has to stop and figure out how something works, I've probably missed something.
-          </p>
-          <p class="body-text">
-            That's why I don't start with tools. I start by understanding what's actually happening, what's getting in the way, and what people really need. Sometimes the best solution isn't adding something new. It's removing what was never needed in the first place.
-          </p>
-          <p class="body-text">Here's what that looks like in practice:</p>
-
-          <ol class="practice-list">
-  <li class="practice-item">
-    I ask what's actually causing the problem before I think about the solution. <span class="term">(Requirements discovery)</span>
-  </li>
-  <li class="practice-item">
-    I simplify a workflow so it saves everyone time, not just me. If a step doesn't need to exist, I remove it. <span class="term">(Process mapping and improvement)</span>
-  </li>
-  <li class="practice-item">
-    I care about how information is organized just as much as how the interface looks. A clean interface on a confusing database still fails the person using it. <span class="term">(Data structuring and gap analysis)</span>
-  </li>
-  <li class="practice-item">
-    I design for the least technical person in the room. If they need help to use it, it isn't ready. <span class="term">(Stakeholder-first thinking)</span>
-  </li>
-  <li class="practice-item">
-    I write documentation for the people using the system, not just the people who built it. <span class="term">(Requirements documentation)</span>
-  </li>
-</ol>
-          <p class="body-text">
-            <strong class="emphasis">The result?</strong> People spend less time figuring things out and more time getting things done.
-          </p>
-        </section>
-
-        <hr class="divider" />
-
-        <!-- ── SOFT CTA ── -->
-        <!-- Points forward, not toward contact. This page's only job is to
-           earn "I like how this person thinks" — the direct ask belongs on
-           Get In Touch, after Work has done the proving. -->
-        <section class="section cta-section" aria-label="Continue to work">
-          <p class="body-text cta-lead">
-            Want to see what that looks like?
-          </p>
-          <a
-            href="https://www.notion.so/gabgeneral/Inside-the-Process-34de05f6a1698034b65dfde21565fe50?source=copy_link"
-            class="next-cta"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Here's the work
-            <span class="arrow" aria-hidden="true">→</span>
-          </a>
-        </section>
-
-        <footer>
-          <p class="footer">
-            © 2026 Gabriel Philip General. All rights reserved.
-          </p>
-        </footer>
-      </article>
-    </main>
-    <script src="what-i-do.js"></script>
-  </body>
+  <script src="what-i-do.js"></script>
+</body>
 </html>
