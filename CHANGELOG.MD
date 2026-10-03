@@ -14,6 +14,49 @@ Format: Version · Date · What changed and why.
 
 > Changes staged but not yet deployed to production.
 
+> A complete repositioning. The Webfolio is now dedicated to my work as a Business Analyst, with a cleaner technical foundation behind it.
+
+### Changed
+
+- Completely repositioned the Webfolio from **Information Systems Graduate** to **Business Analyst**. The role label, bio, page titles, and copy now present me as a Business Analyst.
+- Bio now focuses on helping businesses work out what they actually need, then documenting it clearly enough for anyone to act on.
+- Rewrote the **What I Do** page around one belief: the best systems are the ones people don't have to think about. It now lists five ways I work, each tagged with the Business Analysis skill it shows: requirements discovery, process mapping and improvement, data structuring and gap analysis, stakeholder-first thinking, and requirements documentation.
+- The **What I Do** page now ends by pointing to **Work** instead of asking for contact. The direct ask stays on **Get In Touch**.
+- Split the CSS: shared styles now live in `base.css`, and `style.css` and `what-i-do.css` hold page-specific rules only.
+- Homepage wrapper is now a `<main>` landmark.
+- Rewrote the scroll button script. It now rotates a single arrow instead of swapping SVGs, hides itself when the page is too short to scroll, and responds to window resizing.
+
+### Added
+
+- Search and sharing metadata on both pages, written for a Business Analyst audience: meta descriptions, canonical URLs, and Open Graph and Twitter card tags.
+- Structured data (JSON-LD) listing my name, job title (Business Analyst), and profile links, so search engines and AI tools can read who I am without guessing.
+- Full favicon set and web manifest on the homepage (previously only on the What I Do page).
+- Custom 404 page, `robots.txt`, `sitemap.xml`, and security headers (`_headers`).
+- Print styles.
+
+### Fixed
+
+- Removed the invalid `alt` attribute from the social icon SVGs. The links' `aria-label` now carries the name on its own.
+- Removed a `rel` attribute from the Get In Touch link that did nothing without `target="_blank"`.
+
+### Performance
+
+- Scroll button updates at most once per frame and only touches the page when its state changes.
+- Trimmed the Google Fonts request to the weights actually used.
+- Added avatar `width` and `height` so the page does not shift while the image loads.
+- Page height uses `100dvh` so mobile browser toolbars no longer cause jumps.
+
+### Accessibility
+
+- Hid the decorative nav arrows on the homepage from screen readers.
+- Respect the reduced motion setting in both the CSS and the scroll button.
+
+### Why
+
+The Webfolio now has one job: show how I work as a Business Analyst. The copy and the **What I Do** page explain how I approach requirements, processes, information, and documentation.
+
+My web development work will live in a separate portfolio, so this one no longer needs to cover both. The technical updates, based on HTML5 Boilerplate practices, make sure the right people can find, read, and share it.
+
 ---
 
 ## [v2.0.0] — 2026-07-30
