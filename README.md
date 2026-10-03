@@ -1,8 +1,6 @@
 # Gab Webfolio
 
-This repository is a Git backup for my personal website / webfolio. 
-
-Live link here: https://gab-webfolio.pages.dev/
+This repository is a Git backup for one of my personal website / webfolio.
 
 I use this repo for version control, backup, and tracking changes as I continue improving the website over time.
 
