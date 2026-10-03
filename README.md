@@ -2,6 +2,8 @@
 
 This repository is a Git backup for one of my personal website / webfolio.
 
+Live site here: https://gab-webfolio.pages.dev/
+
 I use this repo for version control, backup, and tracking changes as I continue improving the website over time.
 
 ## About
